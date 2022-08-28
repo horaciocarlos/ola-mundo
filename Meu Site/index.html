@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Testando Midia Query</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons">
+                      
+    <link rel="stylesheet" href="media-query.css">
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <h1>Meu Site</h1>
         <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i>
@@ -45,6 +46,15 @@
             </article>
           </main> 
           <script>
+
+            function mudouTamanho(){
+              if (window.innerWidth >= 768) {
+                safona.style.display = 'block'
+              } else {
+                safona.style.display = 'none'
+              }
+            }
+
             function clickMenu(){
             if (safona.style.display == 'block'){
                 safona.style.display = 'none'
